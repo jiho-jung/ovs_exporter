@@ -1,6 +1,6 @@
-module github.com/Liquescent-Development/ovs_exporter
+module github.com/jiho-jung/ovs_exporter
 
-go 1.24
+go 1.23.8
 
 require (
 	github.com/go-kit/log v0.2.1
