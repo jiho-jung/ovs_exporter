@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/go-kit/log/level"
-	ovs "github.com/Liquescent-Development/ovs_exporter/pkg/ovs_exporter"
+	ovs "github.com/jiho-jung/ovs_exporter/pkg/ovs_exporter"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
