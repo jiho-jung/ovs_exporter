@@ -25,6 +25,7 @@ import (
 	"github.com/go-kit/log"
 	"github.com/go-kit/log/level"
 	"github.com/greenpau/ovsdb"
+	"github.com/jiho-jung/ovs_exporter/pkg/spclog"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/common/version"
 )
@@ -549,11 +550,13 @@ type Exporter struct {
 	nextCollectionTicker int64
 	metrics              []prometheus.Metric
 	logger               log.Logger
+	spcLogger            spclog.Logger
 }
 
 type Options struct {
-	Timeout int
-	Logger  log.Logger
+	Timeout   int
+	Logger    log.Logger
+	SpcLogger spclog.Logger
 
 	RunDir              string
 	VswitchName         string
