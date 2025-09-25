@@ -554,23 +554,8 @@ type Exporter struct {
 }
 
 type Options struct {
-	Timeout   int
-	Logger    log.Logger
-	SpcLogger spclog.Logger
-
-	RunDir              string
-	VswitchName         string
-	Socket              string
-	VswitchDataPath     string
-	VswitchLogPath      string
-	VswitchPidPath      string
-	VswitchSystemIdPath string
-
-	VswitchdLogPath string
-	VswitchdPidPath string
-
-	OvnLogPath string
-	OvnPidPath string
+	Timeout int
+	Logger  log.Logger
 }
 
 // NewLogger returns an instance of logger.

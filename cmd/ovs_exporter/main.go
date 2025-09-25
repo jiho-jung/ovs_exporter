@@ -8,7 +8,6 @@ import (
 
 	"github.com/go-kit/log/level"
 	ovs "github.com/jiho-jung/ovs_exporter/pkg/ovs_exporter"
-	"github.com/jiho-jung/ovs_exporter/pkg/spclog"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
@@ -87,9 +86,8 @@ func main() {
 	)
 
 	opts := ovs.Options{
-		Timeout:   pollTimeout,
-		SpcLogger: spclog.NewLogger(),
-		Logger:    logger,
+		Timeout: pollTimeout,
+		Logger:  logger,
 	}
 
 	exporter := ovs.NewExporter(opts)
